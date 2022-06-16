@@ -1,0 +1,22 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.908213",
+   "Default View_TopLeft":"-170,-152",
+   "DisplayTieOff":"1",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_GPIO_LED0 -pg 1 -lvl 3 -x 530 -y 80 -defaultsOSRD
+preplace portBus sysclk100_p -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace portBus sysclk100_n -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace inst clock_buffer -pg 1 -lvl 1 -x 170 -y 80 -defaultsOSRD
+preplace inst controller -pg 1 -lvl 2 -x 420 -y 80 -defaultsOSRD
+preplace netloc IBUF_DS_N_0_1 1 0 1 NJ 100
+preplace netloc IBUF_DS_P_0_1 1 0 1 NJ 80
+preplace netloc clock_buffer_IBUF_OUT 1 1 1 N 80
+preplace netloc controller_0_LED 1 2 1 N 80
+levelinfo -pg 1 0 170 420 530
+pagesize -pg 1 -db -bbox -sgen -170 0 650 160
+"
+}
+0
