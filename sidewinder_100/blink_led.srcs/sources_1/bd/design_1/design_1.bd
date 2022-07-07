@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x3DC272BB48B52E68",
+      "boundary_crc": "0x8906D0833AB10DC7",
       "device": "xczu19eg-ffvc1760-2-i",
       "gen_directory": "../../../../blink_led.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -14,63 +14,24 @@
       "clock_buffer": "",
       "controller": ""
     },
+    "interface_ports": {
+      "clk_100mhz": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+        "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          }
+        }
+      }
+    },
     "ports": {
-      "sysclk100_p": {
-        "type": "clk",
-        "direction": "I",
-        "left": "0",
-        "right": "0",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "design_1_IBUF_DS_P_0",
-            "value_src": "default"
-          },
-          "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "default"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "PHASE": {
-            "value": "0.0",
-            "value_src": "default"
-          }
-        }
-      },
-      "sysclk100_n": {
-        "type": "clk",
-        "direction": "I",
-        "left": "0",
-        "right": "0",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "design_1_IBUF_DS_N_0",
-            "value_src": "default"
-          },
-          "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "default"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "PHASE": {
-            "value": "0.0",
-            "value_src": "default"
-          }
-        }
-      },
       "GPIO_LED0": {
         "direction": "O"
       }
@@ -106,8 +67,8 @@
                 "value_src": "ip_prop"
               },
               "CLK_DOMAIN": {
-                "value": "design_1_IBUF_DS_N_0",
-                "value_src": "ip_prop"
+                "value": "design_1_util_ds_buf_0_0_IBUF_OUT",
+                "value_src": "default_prop"
               }
             }
           },
@@ -117,19 +78,15 @@
         }
       }
     },
+    "interface_nets": {
+      "CLK_IN_D_0_1": {
+        "interface_ports": [
+          "clk_100mhz",
+          "clock_buffer/CLK_IN_D"
+        ]
+      }
+    },
     "nets": {
-      "IBUF_DS_N_0_1": {
-        "ports": [
-          "sysclk100_n",
-          "clock_buffer/IBUF_DS_N"
-        ]
-      },
-      "IBUF_DS_P_0_1": {
-        "ports": [
-          "sysclk100_p",
-          "clock_buffer/IBUF_DS_P"
-        ]
-      },
       "clock_buffer_IBUF_OUT": {
         "ports": [
           "clock_buffer/IBUF_OUT",
